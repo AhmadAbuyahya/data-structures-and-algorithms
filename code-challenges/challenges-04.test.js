@@ -89,13 +89,18 @@ Write a function named citiesAtoJ that takes in an array of city names and uses 
 
 const citiesAtoJ = (arr) => {
   // Solution code here...
-  let newArr=arr.match(/\b[A-J].*?\b/g);
-  if (newArr === null) {
-    return [];
-  } else {
-    return newArr;
-  }
+  let newArr = [];
+  let regEx = /^[A-J]/;
 
+  arr.forEach( element => {
+
+    if (regEx.test(element) === true){
+      newArr.push(element);
+    }
+
+  });
+
+  return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
