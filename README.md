@@ -12,4 +12,9 @@ Each day, you'll add one new file to this folder to do your work for the day's a
 
 ### 401 Data Structures, Code Challenges
 
-- Please follow the instructions specific to your 401 language, which can be found in the directory below, matching your course.
+## 401 Data Structures, Code Challenges
+| Challenge           | URL|
+| ---                 | ---|
+| arrayReverse        | [Reverse an array](./code-challenges/arrayReverse/array-reverse.js)|
+| arrayShift          | [Insert Value in the middle of an array](./code-challenges/arrayShift/array-shift.js)|
+
