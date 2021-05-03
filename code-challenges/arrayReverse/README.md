@@ -8,7 +8,7 @@ achieving this without using built in functions
 ## Approach & Efficiency
 1- understand the problem
 2- plan the solution
-3- the divide the problem into multiple smaller problems
+3- divide the problem into multiple smaller problems
 
 ## Solution
 ![whiteboard](../assets/array-reverse.jpg)
