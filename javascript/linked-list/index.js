@@ -59,7 +59,18 @@ class LinkedList {
     }
     return this;
   }
-
+  insertAfter(value, newVal){
+    let node = new Node(newVal);
+    let currentNode=this.head;
+    while(currentNode){
+      if (currentNode.value===value){
+        currentNode.next=node;
+        return;
+      }else{
+        currentNode=currentNode.next;
+      }
+    }
+  }
 }
 
 

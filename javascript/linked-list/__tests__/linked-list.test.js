@@ -61,5 +61,34 @@ describe('linked List test',()=>{
     testList.insert(7);
     expect(testList.toString()).toEqual(' {7} ->  {6} ->  {5} -> null');
   });
+  it('Can successfully add a node to the end of the linked list',()=>{
+    let testList= new LinkedList;
+    testList.insert(5);
+    testList.append(6);
+    expect(testList.head.next.value).toEqual(6);
+  });
+  it('Can successfully add multiple nodes to the end of a linked list',()=>{
+    let testList= new LinkedList;
+    testList.insert(5);
+    testList.append(6);
+    testList.append(7);
+    expect(testList.head.next.value).toEqual(6);
+    expect(testList.head.next.next.value).toEqual(7);
+  });
+  it('Can successfully insert after a node in the middle of the linked list',()=>{
+    let testList= new LinkedList;
+    testList.insert(5);
+    testList.append(6);
+    testList.append(7);
+    testList.insertAfter(6,11);
+    expect(testList.head.next.next.value).toEqual(11);
+  });
+  it('Can successfully insert a node after the last node of the linked list',()=>{
+    let testList= new LinkedList;
+    testList.insert(5);
+    testList.append(6);
+    testList.insertAfter(6,11);
+    expect(testList.head.next.next.value).toEqual(11);
+  });
 
 });
