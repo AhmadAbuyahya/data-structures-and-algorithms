@@ -14,16 +14,13 @@ class LinkedList {
   insert(value) {
     let node = new Node(value);
 
-    if (!this.head) {
-      this.head = node;
-    } else {
-      let currentNode = this.head;
-      while (currentNode.next) {
-        currentNode = currentNode.next;
-      }
-      currentNode.next = node;
+    if(this.head){
+      node.next=this.head;
+      this.head=node;
+    }else{
+      this.head=node;
     }
-    return this;
+    return this ;
   }
   includes(value) {
 
@@ -48,6 +45,20 @@ class LinkedList {
     return str+'null';
   }
 
+  append(value) {
+    let node = new Node(value);
+
+    if (!this.head) {
+      this.head = node;
+    } else {
+      let currentNode = this.head;
+      while (currentNode.next) {
+        currentNode = currentNode.next;
+      }
+      currentNode.next = node;
+    }
+    return this;
+  }
 
 }
 

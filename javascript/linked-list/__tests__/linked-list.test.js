@@ -24,16 +24,16 @@ describe('linked List test',()=>{
     testList.insert(5);
     testList.insert(6);
     testList.insert(7);
-    expect(testList.head.value).toEqual(5);
+    expect(testList.head.value).toEqual(7);
   });
   it('Can properly insert multiple nodes into the linked list',()=>{
     let testList= new LinkedList;
     testList.insert(5);
     testList.insert(6);
     testList.insert(7);
-    expect(testList.head.value).toEqual(5);
+    expect(testList.head.value).toEqual(7);
     expect(testList.head.next.value).toEqual(6);
-    expect(testList.head.next.next.value).toEqual(7);
+    expect(testList.head.next.next.value).toEqual(5);
   });
   it('Will return true when finding a value within the linked list that exists',()=>{
     let testList= new LinkedList;
@@ -59,7 +59,7 @@ describe('linked List test',()=>{
     testList.insert(5);
     testList.insert(6);
     testList.insert(7);
-    expect(testList.toString()).toEqual(' {5} ->  {6} ->  {7} -> null');
+    expect(testList.toString()).toEqual(' {7} ->  {6} ->  {5} -> null');
   });
 
 });
