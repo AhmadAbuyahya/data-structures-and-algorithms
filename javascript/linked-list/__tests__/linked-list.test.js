@@ -88,7 +88,11 @@ describe('linked List test',()=>{
     testList.insert(5);
     testList.append(6);
     testList.insertAfter(6,11);
-    expect(testList.head.next.next.value).toEqual(11);
+    testList.insertAfter(11,3);
+    testList.insertAfter(5,2);
+    // testList.insertAfter(6,11);s
+    // expect(testList.head.next.next.value).toEqual(11);
+    expect(testList.toString()).toEqual(11);
   });
 
 });

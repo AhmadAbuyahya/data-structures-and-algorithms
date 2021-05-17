@@ -60,15 +60,15 @@ class LinkedList {
     return this;
   }
   insertAfter(value, newVal){
-    let node = new Node(newVal);
     let currentNode=this.head;
-    while(currentNode){
-      if (currentNode.value===value){
+    while(currentNode.value){
+      if(currentNode.value===value){
+        let node = new Node(newVal);
+        node.next=currentNode.next;
         currentNode.next=node;
         return;
-      }else{
-        currentNode=currentNode.next;
       }
+      currentNode=currentNode.next;
     }
   }
 }

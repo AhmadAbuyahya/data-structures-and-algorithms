@@ -17,5 +17,6 @@ Each day, you'll add one new file to this folder to do your work for the day's a
 | ---                 | ---|
 | arrayReverse        | [Reverse an array](./code-challenges/arrayReverse/array-reverse.js)|
 | arrayShift          | [Insert Value in the middle of an array](./code-challenges/arrayShift/array-shift.js)|
-| arrayShift          | [array binary search](./code-challenges/arrayShift/array-binary-search.js)|
+| arrayBinarySearch         | [array binary search](./code-challenges/arrayShift/array-binary-search.js)|
+| linked lists       | [linked list implementation](./javascript/linked-list/index.js)|
 
