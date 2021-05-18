@@ -71,6 +71,22 @@ class LinkedList {
       }
     }
   }
+  kthFromEnd(k){
+    let currentNode=this.head;
+    let arr=[];
+    if(k<0){
+      return 'Exception';
+    }
+    while(currentNode){
+      arr.push(currentNode.value);
+      currentNode=currentNode.next;
+    }
+    if(k>=arr.length){
+      return 'Exception';
+    }else{
+      return arr[arr.length-(k+1)];
+    }
+  }
 }
 
 

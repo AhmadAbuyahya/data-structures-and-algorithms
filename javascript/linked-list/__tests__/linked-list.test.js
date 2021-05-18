@@ -90,5 +90,50 @@ describe('linked List test',()=>{
     testList.insertAfter(6,11);
     expect(testList.head.next.next.value).toEqual(11);
   });
+  it('k is greater than the length of the linked list',()=>{
+    let testList= new LinkedList;
+    testList.insert(5);
+    testList.append(6);
+    testList.append(7);
+    testList.append(8);
+    testList.append(9);
+    expect(testList.kthFromEnd(6)).toEqual('Exception');
+  });
+  it('k and the length of the list are the same',()=>{
+    let testList= new LinkedList;
+    testList.insert(5);
+    testList.append(6);
+    testList.append(7);
+    testList.append(8);
+    testList.append(9);
+    expect(testList.kthFromEnd(5)).toEqual('Exception');
+  });
+  it('k is not a positive integer',()=>{
+    let testList= new LinkedList;
+    testList.insert(5);
+    testList.append(6);
+    testList.append(7);
+    testList.append(8);
+    testList.append(9);
+    expect(testList.kthFromEnd(-5)).toEqual('Exception');
+  });
+  it('Where the linked list is of a size 1',()=>{
+    let testList= new LinkedList;
+    testList.insert(5);
+    expect(testList.kthFromEnd(0)).toEqual(5);
+  });
+  it('k is not at the end, but somewhere in the middle of the linked list',()=>{
+    let testList= new LinkedList;
+    testList.insert(5);
+    testList.append(6);
+    testList.append(7);
+    testList.append(8);
+    testList.append(9);
+    expect(testList.kthFromEnd(4)).toEqual(5);
+    expect(testList.kthFromEnd(3)).toEqual(6);
+    expect(testList.kthFromEnd(2)).toEqual(7);
+    expect(testList.kthFromEnd(1)).toEqual(8);
+    expect(testList.kthFromEnd(0)).toEqual(9);
+  });
 
 });
