@@ -18,3 +18,4 @@ kthFromEnd(k): returns the Kth value from the end of the list
 ![whiteboard for insert after](../../code-challenges/assets/insertAfter.jpeg)
 ![whiteboard for insert before](../../code-challenges/assets/insertBefore.png)
 ![whiteboard for kthFromEnd](../../code-challenges/assets/kthFromEnd.png)
+![whiteboard for zippedList](../../code-challenges/assets/zipped.jpg)
