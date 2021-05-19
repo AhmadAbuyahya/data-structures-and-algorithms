@@ -153,18 +153,4 @@ describe('linked List test',()=>{
     expect(testList.kthFromEnd(1)).toEqual(8);
     expect(testList.kthFromEnd(0)).toEqual(9);
   });
-  it('test zip',()=>{
-    let list1 =new LinkedList;
-    let list2 =new LinkedList;
-    list1.insert(1);
-    list2.insert(1);
-    list1.append(2);
-    list2.append(2);
-    list1.append(3);
-    list2.append(3);
-    list1.append(4);
-    list2.append(4);
-  
-    expect(LinkedList.zipList(list1.list2).toString).toEqual('')
-  })
 });
