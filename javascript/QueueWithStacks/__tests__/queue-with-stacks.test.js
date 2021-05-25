@@ -1,4 +1,4 @@
-const Stack = require('../stacks-and-queues.js/stack');
+const Stack = require('../../stacks-and-queues.js/stack');
 const PseudoQueue = require('./__tests__/queue-with-stacks');
 
 describe('PseudoQueue', () => {
