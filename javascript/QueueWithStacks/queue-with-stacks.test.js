@@ -1,5 +1,5 @@
 const Stack = require('../stacks-and-queues.js/stack');
-const PseudoQueue = require('./queue-with-stacks');
+const PseudoQueue = require('./__tests__/queue-with-stacks');
 
 describe('PseudoQueue', () => {
   it('successfully enqueues values', () => {
