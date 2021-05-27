@@ -35,6 +35,15 @@ class Stack {
       return false;
     }
   }
+  getMax(){
+    let max=0;
+    for(let i=0;i<this.storage.length;i++){
+      if(this.storage[i]>=max){
+        max=this.storage[i];
+      }
+    }
+    return max;
+  }
 
 }
 

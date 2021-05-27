@@ -47,4 +47,14 @@ describe('Stack',()=>{
     expect(s.pop()).toEqual('Exception');
     expect(s.peek()).toEqual('Exception');
   });
+  it('gets the max value',()=>{
+    let s=new Stack();
+    s.push(1);
+    s.push(2);
+    s.push(3);
+    s.push(15);
+    s.push(4);
+    s.push(100);
+    expect(s.getMax()).toEqual(100);
+  });
 });
