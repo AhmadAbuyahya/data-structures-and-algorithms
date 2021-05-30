@@ -21,3 +21,8 @@ all of above +
 .contains(value): returns true if the value exists in the tree and false otherwise.
 .findMax(vale): returns the highest value in the tree
 .findMin(vale): returns the lowest value in the tree
+
+White Boards:
+
+FindMax![Find Max](./findMax.jpeg)
+FindMin![Find Max](./findMin.jpeg)
