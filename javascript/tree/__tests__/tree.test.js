@@ -78,5 +78,14 @@ describe('Binary Search Tree', ()=> {
     expect(biSearchTree.contains(3)).toEqual(true);
     expect(biSearchTree.contains(15)).toEqual(false);
   });
+  it ('finds max', ()=> {
+    let biSearchTree = new BinarySearchTree();
+    biSearchTree.add(8);
+    biSearchTree.add(10);
+    biSearchTree.add(3);
+    biSearchTree.add(6);
+    biSearchTree.add(1);
+    expect(biSearchTree.findMax()).toEqual(10);
+  });
 
 });

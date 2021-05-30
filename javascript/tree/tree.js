@@ -44,39 +44,56 @@ class BinaryTree {
     traverse(this.root);
     return results;
   }
+  findMax(){
+    let results=[];
+    let max=0;
+    let traverse=(node)=>{
+      if (node.left) traverse(node.left);
+      if (node.right) traverse(node.right);
+      results.push(node.value);
+    };
+    traverse(this.root);
+    for (let i = 0; i < results.length; i++) {
+      if (results[i]>max){
+        max=results[i];
+      }
+    }
+    return max;
+  }
 }
 
 class BinarySearchTree extends BinaryTree {
   add(value){
     let newNode=new Node(value);
+    const insert =(node, newNode)=>{
+      if(newNode.value < node.value){
+        if(node.left === null){
+          node.left = newNode;
+        }else{
+          insert(node.left, newNode);
+        }
+      } else{
+        if(node.right === null){
+          node.right = newNode;
+        }else{
+          insert(node.right,newNode);
+        }
+      }
+    };
     if(this.root===null){
       this.root=newNode;
     }else{
-      this.insertNode(this.root,newNode);
-    }
-  }
-  insertNode(node, newNode){
-    if(newNode.value < node.value){
-      if(node.left === null){
-        node.left = newNode;
-      }else{
-        this.insertNode(node.left, newNode);
-      }
-    } else{
-      if(node.right === null){
-        node.right = newNode;
-      }else{
-        this.insertNode(node.right,newNode);
-      }
+      insert(this.root,newNode);
     }
   }
   contains(value){
     let arr=this.preOrder();
-    if(arr.includes(value)){
-      return true;
-    }else{
-      return false;
+    for(let i=0;i<arr.length;i++){
+      if(arr[i]===value){
+        return true;
+      }
     }
+    return false;
   }
 }
 module.exports = {
