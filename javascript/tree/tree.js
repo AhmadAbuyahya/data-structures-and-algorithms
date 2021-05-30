@@ -49,34 +49,49 @@ class BinaryTree {
 class BinarySearchTree extends BinaryTree {
   add(value){
     let newNode=new Node(value);
+    const insert =(node, newNode)=>{
+      if(newNode.value < node.value){
+        if(node.left === null){
+          node.left = newNode;
+        }else{
+          insert(node.left, newNode);
+        }
+      } else{
+        if(node.right === null){
+          node.right = newNode;
+        }else{
+          insert(node.right,newNode);
+        }
+      }
+    };
     if(this.root===null){
       this.root=newNode;
     }else{
-      this.insertNode(this.root,newNode);
-    }
-  }
-  insertNode(node, newNode){
-    if(newNode.value < node.value){
-      if(node.left === null){
-        node.left = newNode;
-      }else{
-        this.insertNode(node.left, newNode);
-      }
-    } else{
-      if(node.right === null){
-        node.right = newNode;
-      }else{
-        this.insertNode(node.right,newNode);
-      }
+      insert(this.root,newNode);
     }
   }
   contains(value){
     let arr=this.preOrder();
-    if(arr.includes(value)){
-      return true;
-    }else{
-      return false;
+    for(let i=0;i<arr.length;i++){
+      if(arr[i]===value){
+        return true;
+      }
     }
+    return false;
+  }
+  findMax(){
+    let current=this.root;
+    while(current.right){
+      current=current.right;
+    }
+    return current.value;
+  }
+  findMin(){
+    let current=this.root;
+    while(current.left){
+      current=current.left;
+    }
+    return current.value;
   }
 }
 module.exports = {

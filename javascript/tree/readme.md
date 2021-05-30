@@ -7,7 +7,7 @@ using recursive function for traversing and inserting in bi search trees
 approach: recursion
 Efficiency:
 space: O(h) for all methods where h is the height of the tree
-time: O(n) for all methods where is the number of nodes
+time: O(n) for all methods where n is the number of nodes
 
 ## API
 ### Binary Trees
@@ -19,3 +19,5 @@ time: O(n) for all methods where is the number of nodes
 all of above +
 .insert(value): adds a node to the tree with the correct order.
 .contains(value): returns true if the value exists in the tree and false otherwise.
+.findMax(vale): returns the highest value in the tree
+.findMin(vale): returns the lowest value in the tree
