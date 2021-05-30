@@ -44,6 +44,22 @@ class BinaryTree {
     traverse(this.root);
     return results;
   }
+  findMax(){
+    let results=[];
+    let max=0;
+    let traverse=(node)=>{
+      if (node.left) traverse(node.left);
+      if (node.right) traverse(node.right);
+      results.push(node.value);
+    };
+    traverse(this.root);
+    for (let i = 0; i < results.length; i++) {
+      if (results[i]>max){
+        max=results[i];
+      }
+    }
+    return max;
+  }
 }
 
 class BinarySearchTree extends BinaryTree {
@@ -78,20 +94,6 @@ class BinarySearchTree extends BinaryTree {
       }
     }
     return false;
-  }
-  findMax(){
-    let current=this.root;
-    while(current.right){
-      current=current.right;
-    }
-    return current.value;
-  }
-  findMin(){
-    let current=this.root;
-    while(current.left){
-      current=current.left;
-    }
-    return current.value;
   }
 }
 module.exports = {

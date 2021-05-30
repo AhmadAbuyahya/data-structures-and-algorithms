@@ -14,15 +14,14 @@ time: O(n) for all methods where n is the number of nodes
 .preOrder(): traverses the tree using preOrder method and returns an array of the values .
 .inOrder(): traverses the tree using inOrder method and returns an array of the values .
 .postOrder(): traverses the tree using postOrder method and returns an array of the values .
+.findMax(vale): returns the highest value in the tree
 
 ### Binary search Trees
 all of above +
 .insert(value): adds a node to the tree with the correct order.
 .contains(value): returns true if the value exists in the tree and false otherwise.
-.findMax(vale): returns the highest value in the tree
-.findMin(vale): returns the lowest value in the tree
+
 
 White Boards:
 
 FindMax![Find Max](./findMax.jpeg)
-FindMin![Find Max](./findMin.jpeg)
