@@ -87,5 +87,11 @@ describe('Binary Search Tree', ()=> {
     biSearchTree.add(1);
     expect(biSearchTree.findMax()).toEqual(10);
   });
+  it ('breadth first', ()=> {
+    let expected = [1,2,3,6,4,5,7,8,9];
+    let breadthFirstResult = tree.breadthFirst();
+    console.log('breadthFirstResult: ', breadthFirstResult);
+    expect(breadthFirstResult).toEqual(expected);
+  });
 
 });

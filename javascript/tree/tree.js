@@ -44,9 +44,25 @@ class BinaryTree {
     traverse(this.root);
     return results;
   }
+  breadthFirst(){
+    let q=[];
+    let results=[];
+    q.push(this.root);
+    while(q.length>0){
+      let front=q.shift();
+      results.push(front.value);
+      if(front.left){
+        q.push(front.left);
+      }
+      if(front.right){
+        q.push(front.right);
+      }
+    }
+    return results;
+  }
   findMax(){
     let results=[];
-    let max=0;
+    let max=this.root.value;
     let traverse=(node)=>{
       if (node.left) traverse(node.left);
       if (node.right) traverse(node.right);

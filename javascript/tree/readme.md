@@ -14,7 +14,8 @@ time: O(n) for all methods where n is the number of nodes
 .preOrder(): traverses the tree using preOrder method and returns an array of the values .
 .inOrder(): traverses the tree using inOrder method and returns an array of the values .
 .postOrder(): traverses the tree using postOrder method and returns an array of the values .
-.findMax(vale): returns the highest value in the tree
+.findMax(vale): returns the highest value in the tree.
+.breadthFirst(): traverses the tree using breadth first method and returns an array of the values.
 
 ### Binary search Trees
 all of above +
@@ -24,4 +25,5 @@ all of above +
 
 White Boards:
 
-FindMax![Find Max](./findMax.jpeg)
+FindMax ![Find Max](./findMax.jpeg)
+BreadthFirst ![BreadthFirst](./BreadthFirst.jpeg)
