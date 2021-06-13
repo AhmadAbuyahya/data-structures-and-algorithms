@@ -2,7 +2,9 @@
 const Node = require('../tree').Node;
 const BinaryTree = require('../tree').BinaryTree;
 const BinarySearchTree = require('../tree').BinarySearchTree;
+const compare=require('../compare');
 let tree = null;
+let tree2 = null;
 describe('Binary Tree', ()=> {
 
   beforeAll(()=> {
@@ -26,6 +28,7 @@ describe('Binary Tree', ()=> {
     three.right = five;
 
     tree = new BinaryTree(one);
+    tree2 = new BinaryTree(two);
   });
 
   it ('constructor', ()=> {
@@ -92,6 +95,10 @@ describe('Binary Search Tree', ()=> {
     let breadthFirstResult = tree.breadthFirst();
     console.log('breadthFirstResult: ', breadthFirstResult);
     expect(breadthFirstResult).toEqual(expected);
+  });
+  it ('compare file sys',()=>{
+    expect(compare(tree,tree2)).toEqual(false);
+    expect(compare(tree,tree)).toEqual(true);
   });
 
 });
