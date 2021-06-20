@@ -11,3 +11,6 @@ Repeat steps 1 and 2 on both the smaller and larger list. That is, Recursively a
 # Visual 
 sample array: [8,4,23,42,16,15]
 ![board](./assets/board.png)
+
+# efficiency
+ Quick sort runs with the Time Complexity of O(nlogn).
