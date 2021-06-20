@@ -19,3 +19,12 @@ add: takes in both the key and value. This method should hash the key, and add t
 get: takes in the key and returns the value from the table.
 contains: takes in the key and returns a boolean, indicating if the key exists in the table already.
 hash: takes in an arbitrary key and returns an index in the collection.
+
+## repeatedWord
+a function that accepts a lengthy string parameter and returns the first word to occur more than once in that provided string.
+
+Approach:
+create a hashtable 
+split the string into an array and iterate through it
+on each iteration check if the value exists as a key in the table and return it if it does
+add the value to the table
