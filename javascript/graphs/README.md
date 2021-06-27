@@ -30,3 +30,7 @@ Both nodes should already be in the Graph
 * size
   * Arguments: none
   * Returns the total number of nodes in the graph
+
+* breadthFirst
+  * Starting node
+  * returns an array of the result of traversing the graph breadth first 

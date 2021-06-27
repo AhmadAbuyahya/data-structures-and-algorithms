@@ -20,12 +20,12 @@ describe('graph', () => {
   myGraph.addVertex(four);
   myGraph.addVertex(five);
 
-  myGraph.addDirectedEdge(zero, two);
-  myGraph.addDirectedEdge(two, three);
-  myGraph.addDirectedEdge(two, four);
-  myGraph.addDirectedEdge(three, five);
-  myGraph.addDirectedEdge(four, five);
-  myGraph.addDirectedEdge(one, three);
+  myGraph.addUnDirectedEdge(zero, two);
+  myGraph.addUnDirectedEdge(two, three);
+  myGraph.addUnDirectedEdge(two, four);
+  myGraph.addUnDirectedEdge(three, five);
+  myGraph.addUnDirectedEdge(four, five);
+  myGraph.addUnDirectedEdge(one, three);
 
   it('Node can be successfully added to the graph', () => {
     expect(myGraph.adjacencyList.has(zero)).toEqual(true);
@@ -42,12 +42,18 @@ describe('graph', () => {
     expect(i).toEqual(6);
   });
   it('All appropriate neighbors can be retrieved from the graph', () => {
-    expect(myGraph.getNeighbors(two).length).toEqual(2);
+    expect(myGraph.getNeighbors(two).length).toEqual(3);
   });
   it('Neighbors are returned with the weight between nodes included', () => {
     expect(myGraph.getNeighbors(two)[0].weight).toEqual(undefined);
   });
   it('The proper size is returned, representing the number of nodes in the graph', () => {
     expect(myGraph.size()).toEqual(6);
+  });
+  it('BFS works', () => {
+    expect(myGraph.breadthFirst(one)).toEqual([ 1, 3, 2, 5, 0, 4 ]);
+  });
+  it('BFS works 2', () => {
+    expect(myGraph.breadthFirst(two)).toEqual([ 2, 0, 3, 4, 5, 1 ]);
   });
 });
