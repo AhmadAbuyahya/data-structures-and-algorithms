@@ -1,7 +1,7 @@
 class Edge {
-  constructor(vertex, weight) {
+  constructor(vertex) {
     this.vertex = vertex;
-    this.weight = weight;
+    // this.weight = weight;
   }
 }
 
