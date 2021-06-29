@@ -34,3 +34,7 @@ Both nodes should already be in the Graph
 * breadthFirst
   * Starting node
   * returns an array of the result of traversing the graph breadth first 
+
+* depthFirst
+  * Starting node
+  * returns an array of the result of traversing the graph depth first 
