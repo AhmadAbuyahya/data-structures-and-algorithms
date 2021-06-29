@@ -68,6 +68,25 @@ class Graph {
     }
     return output;
   }
+  depthFirst(start){
+    const visited = new Set();
+    let output=[];
+    const traverse=(node)=>{
+      if(visited.has(node)){
+        return;
+      }
+      visited.add(node);
+      output.push(node.value);
+      const adj=this.adjacencyList.get(node);
+      if(adj){
+        for(let i=0;i<adj.length;i++){
+          traverse(adj[i].vertex);
+        }
+      }
+    };
+    traverse(start);
+    return output;
+  }
 }
 
 module.exports = Graph;
@@ -100,7 +119,8 @@ myGraph.addUnDirectedEdge(three, five);
 myGraph.addUnDirectedEdge(four, five);
 myGraph.addUnDirectedEdge(one, three);
 
-console.log(myGraph.breadthFirst(two));
+console.log(myGraph.breadthFirst(one));
+console.log(myGraph.depthFirst(one));
 // myGraph.print();
 // console.log('-----------------');
 // console.log(myGraph.adjacencyList.get(two));

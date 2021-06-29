@@ -56,4 +56,10 @@ describe('graph', () => {
   it('BFS works 2', () => {
     expect(myGraph.breadthFirst(two)).toEqual([ 2, 0, 3, 4, 5, 1 ]);
   });
+  it('DFS works 1', () => {
+    expect(myGraph.depthFirst(two)).toEqual([ 2, 0, 3, 5, 4, 1 ]);
+  });
+  it('DFS works 2', () => {
+    expect(myGraph.depthFirst(one)).toEqual([ 1, 3, 2, 0, 4, 5 ]);
+  });
 });
