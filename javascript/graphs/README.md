@@ -37,4 +37,4 @@ Both nodes should already be in the Graph
 
 * depthFirst
   * Starting node
-  * returns an array of the result of traversing the graph depth first 
+  * returns an array of the result of traversing the graph depth first .
